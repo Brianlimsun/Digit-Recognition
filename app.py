@@ -8,7 +8,7 @@ import io
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://brianlimsun.github.io"])
 
 # Load the trained model
 model = None
