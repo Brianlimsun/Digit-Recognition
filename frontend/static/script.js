@@ -173,7 +173,7 @@ class DigitRecognitionApp {
             const imageData = this.canvas.toDataURL('image/png');
             
             // Send to backend
-            const response = await fetch('https://<RENDER_BACKEND_URL>/predict', {
+            const response = await fetch('https://digit-recognition-3m4l.onrender.com/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
