@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import numpy as np
 import tensorflow as tf
+from tensorflow import keras
 import base64
 from PIL import Image
 import io
@@ -16,7 +17,7 @@ model = None
 def load_model():
     global model
     if os.path.exists("mnist_model.h5"):
-        model = tf.keras.models.load_model("mnist_model.h5")
+        model = keras.models.load_model("mnist_model.h5")
         print("Model loaded successfully!")
     else:
         print("Model file not found. Please run model_train.py first.")
